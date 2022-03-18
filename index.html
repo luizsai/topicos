@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>pagina home</h1>
-    <a href="vendas.html">Ir para paginas de vendas</a>
+    <button>Clique em mim</button>
 </body>
+<script>
+    //o java script fica aqui
+    function criarParagrafo(){
+        let para = document.createElement('p');
+        para.textContent = 'Você clicou no botão.';
+        document.body.appendChild(para);
+    }
+    const botoes = document.querySelectorAll("button");
+    for(var i = 0; i < botoes.length ; i++ ){
+        botoes[i].addEventListener('click', criarParagrafo);
+    }
+</script>
 </html>
